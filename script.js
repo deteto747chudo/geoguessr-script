@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      11.20
 // @description  Features: Automatically score 5000 Points | Score randomly between 4500 and 5000 points | Open in Google Maps
-// @author       0x978
+// @author       deteto_chudo
 // @match        https://www.geoguessr.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=geoguessr.com
 // @grant        GM_webRequest
@@ -15,7 +15,6 @@
 // Learn how I made this script: https://github.com/0x978/GeoGuessr_Resolver/blob/master/howIMadeTheScript.md
 // Contribute things you think will be cool once you learn: https://github.com/0x978/GeoGuessr_Resolver/pulls
 // ================================================================================================================
-
 let globalCoordinates = { // keep this stored globally, and we'll keep updating it for each API call.
     lat: 0,
     lng: 0
@@ -153,6 +152,7 @@ function setInnerText(){
     if(document.getElementsByClassName("header_logo__vV0HK")[0]){
         const logoWrapper = document.getElementsByClassName("header_logo__vV0HK")[0]
         logoWrapper.innerText = text
+        console.log("deteto_chudo on top!")
     }
 }
 
